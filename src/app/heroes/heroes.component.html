@@ -1,0 +1,23 @@
+<div>
+  <ul>
+    <li *ngFor = "let heroItem of heroes" (click)="onSelect(heroItem)" [class.selected] = "heroItem === selectedHero" >
+      <span>{{heroItem.id}} </span> {{heroItem.name}}
+    </li>
+  </ul>
+</div>
+<app-hero-details [hero] = "selectedHero"></app-hero-details>
+<!--<div *ngIf = "selectedHero">-->
+
+  <!--<h2>{{selectedHero.name}} Details</h2>-->
+  <!--<div>-->
+    <!--<span>id: {{selectedHero.id}}</span>-->
+  <!--</div>-->
+  <!--<span>Name:-->
+    <!--{{selectedHero.name | uppercase}}-->
+<!--</span>-->
+  <!--<div>-->
+    <!--<label>name:-->
+      <!--<input type="text" [(ngModel)]="selectedHero.name" placeholder="name"/>-->
+    <!--</label>-->
+  <!--</div>-->
+<!--</div>-->
